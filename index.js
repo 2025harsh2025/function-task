@@ -1,92 +1,77 @@
-// two number//
-
-
-function Add(a,b) {
-  let c = a+b;
-  return  c ;
+//print the number from 1 to 10//
+for (let i = 1 ; i <= 10 ; i++ ) {
+    console.log(i);
 }
-console.log(Add(10,20));
-
-//convert celsius to fahrenheit//
-function ctof(celsius) {
-  fahrenheit = (celsius * 9/5) +32;
-  return fahrenheit;
-  
+//print the even  number between 1 to 20//
+for ( let p = 2; p <= 20; p = p  + 2) {
+    console.log(p);
 }
-console.log(ctof(0));
-// maximum between two nos//
-function max(a,b) {
-  if (a>b){
-    return a; 
-  } else {
-    return b ;
-  } 
+// find the sum of all numbers from 1 to 100//
+let add  = 0
+for (let i = 1; i<= 100 ; i++) {
+        add   =  add + i }
+console.log("sum:", add );
+//print the multiplication table of 5 up to 10//
+let table = 0
+for (let i = 1; i<=10; i++){
+    multiple = 5*i
+console.log("table:", multiple)}
+//Reverse a given string using  a for loop//
+ let  str = "vishal  pagla ";
+ let reversed = "";
+ for ( let i = str.length - 1 ; i >= 0; i --) {
+    reversed = reversed + str[i];
+ }
+ console.log("reversed string:", reversed );
+// for in loop//
+const obj = {
+    name : "vishal",
+    age : 27,
+    eyeColor :"green" ,
+    hobby : "circket"
+};
+//loop through the properties and print each key//
+for (let key in obj) { 
+    console.log ("key:", key);
 }
-console.log (max(50,70));
-//even or odd//
-function OddOrEven(num){
-  if ( num % 2===0) {
-    return "even" ;
-  } else { 
-    return  "odd" ;
-  }
+//loop through and print key -value pairs//
+for (let key in obj) {
+    console.log( "key:",(obj[key]));
 }
-  console.log(OddOrEven(12));
-  console.log(OddOrEven(15));
-  // factorial//
-    
-
-//  Reverse String /
-function reverseString(str) {
-    return str.split('').reverse().join('');
+//count the number of properties//
+let count = 0;
+for ( let key in obj ) {
+    count++;
 }
-console.log(reverseString("hello"));
-
-// Count Vowels in a string //
-
-function countVowels(str) {
-    let vowels = "aeiouAEIOU";
-    let count = 0;
-    for (let char of str) {
-        if (vowels.includes(char)) count++;
+console.log("properties:", count);
+// convert all the values to uppercase if they are string//\
+for (let key in obj ) {
+    if ( typeof obj[key] === "string") {
+        obj[key] = obj [key].toUpperCase();
     }
-    return count;
 }
-console.log(countVowels("javascript")); 
+console.log("new object:",obj);
 
-// Check if a String is a Palindrome //
-
-function isPalindrome(str) {
-    let reversed = str.split('').reverse().join('');
-    return str === reversed;
+//for   of loop //
+//print each element in a array of the number//
+let numbers = [3,6,9,12,15];
+for (let num of numbers) {
+    console.log(num);
 }
-console.log(isPalindrome("madam")); // Output: true
-
-
-// Generate a Random Number Between a Range //
-
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+// find the sum of the element in a aaray//
+let sum = 0
+for ( let num of numbers) {
+    sum = sum+ num;
 }
-console.log(randomNumber(1, 10)); 
-
-// Capitalize the First Letter of Each Word //
-
-function capitalizeWords(sentence) {
-    return sentence.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+console.log ("sum:",sum);
+// print all characters in a string using for of loop//
+let string = "NISHANT RAJ"
+for (let char of string) {
+    console.log(char);
 }
-console.log(capitalizeWords("nishant raj singh vishal pagal")); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//create a new aRRAY WITH THE SQUARE OF THE Each NUMBER IN ARRAY//
+let square = []
+for (let num of numbers) {
+    square.push = num *num 
+console.log("squares:", square);
+}
